@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: #8c3839;
+    
+   
+    
+    /*BackgroundImage*/
+    display: block;
+    background: center/cover url("Images/v1043-024a.jpg") no-repeat;
+    height: auto;
+    /*Fix animation*/
+    animation: moveIt 10s linear infinite;
+}
+@keyframes moveIt {
+    from {
+        background-position: center;
+    }
+    to {
+        background-position: right;
+    }
+}
+
+
+/*Changes Link Colors*/
+a:link {
+    color: #131313;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #2e2e2d;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8c3839;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+
+/*Grid Box*/
+.container {
+    display: grid;
+    grid-template-areas:
+        "topbar topbar topbar"
+        "sidebar content content"
+        "footer footer footer";
+
+    /*Sets sizes of columns*/
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: minmax(1fr,2fr, 1fr);
+    /*GTR:50px auto 70px*/
+    /*Centers the children*/
+    
+    align-items: center;
+    /*justify-items: center;*/
+    
+    gap: 10px;
+    
+    flex-wrap: wrap;
+    
+}
+
+.flexbox{
+  display: flex;
+  
+}
+
+.header {
+    grid-area: topbar;
+}
+.article  {
+    grid-area: content;
+    background-color: #ffd3db;
+    background-clip: padding-box;
+}
+.nav{
+    grid-area: sidebar;
+    background-color: #ffd3db;
+    background-clip: padding-box;
+
+}
+.footer {
+    grid-area: footer;
+    background-color: #ffd3db;
+    /*border-color: #da7073;*/
+    background-clip: padding-box;
+}
+
+/*Fun Stuff*/
+
+/* Start https://www.cursors-4u.com */
+* {
+    cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;
+}
+/* End https://www.cursors-4u.com */
